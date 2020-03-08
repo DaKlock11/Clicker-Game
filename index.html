@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>
+            
+        </title>
+        <link type="text/css" rel="stylesheet" href="./style.css" />
+    </head>
+<style type="text/css">
+    h1 {
+        color: aqua;
+        font: monospace;
+        font-size: 20px;
+    }
+    
+    .silver-background {
+        background-color: silver;
+    }
+    
+    body {
+        background-color: black;
+        color: green;
+        font-family: monospace;
+    }
+    h2 {
+        border-color: darkgoldenrod;
+        margin: 40px 20px 20px 40px;
+        border-top: 10px;
+    }
+    </style>    
+    
+    <body>
+        <a href="#footer">Jump to Bottom</a>
+        <h1>Lets get started </h1>
+          <p id="cookies">0</p>
+          <button id="bake" class="base-button a-button ">
+        Bake cookies</button>
+        <h2>Example h two</h2>
+        <h3 class="silver-background">Cookies Delight</h3>
+        
+        <h4 style="color: coral;">Cookies counting</h4>
+    </body>
+    <script type="text/javascript">
+        var count = 0;
+        var button = document.getElementById('bake');
+        
+        var cookieCountElement = document.getElementById('cookies');
+        
+        
+        button.addEventListener('click', function() {
+            count += 1;
+            
+            cookieCountElement.innerHTML = count;
+           
+      
+            // When the user gets to 15 OR MORE cookies,
+            // Show another element on the page that 
+            // Says you are awesome!
+        });
+             
+      // 1. Write your javascript code in here
+        // -OR-
+        /* 2. Use <script src="????"> to add an external stylesheet */
+    </script>
+    <footer id="footer">Copyright of Dakota Klock</footer>
+</html>
+
+
+
+
+
+
+
+
+

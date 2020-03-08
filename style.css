@@ -1,0 +1,19 @@
+.base-button {
+    height: 100px;
+    width: 200px;
+    border: 10px 10px 10px 10px;
+}
+
+.a-button {
+    background-color: dodgerblue;
+    transition: background-color .5s;
+}
+
+.a-button:hover {
+    background-color: #1eddff;
+    cursor: pointer; 
+}
+
+.title {
+    font-color: green;
+}
