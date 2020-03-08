@@ -35,7 +35,7 @@
           <p id="cookies">0</p>
           <button id="bake" class="base-button a-button ">
         Bake cookies</button>
-        <h2 script=""></h2>
+        <h2 id="status"></h2>
         <h3 class="silver-background">Cookies Delight</h3>
         
         <h4 style="color: coral;">Cookies counting</h4>
@@ -51,9 +51,14 @@
             count += 1;
             
             cookieCountElement.innerHTML = count;
+            
+            if (count >= 15) {
+                var status = document.getElementById('status');
+                status.innerHTML = "You are awesome!"
+            }
         });
       
-       
+       //If the count is less than 15, that status element needs to say "You need to keep baking cookies!"//
         
         
         
