@@ -26,6 +26,12 @@
         border-color: darkgoldenrod;
         margin: 40px 20px 20px 40px;
         border-top: 10px;
+        font-size: 40px;
+    }
+    h5 {
+        font-size: 30px;
+        font-family: fantasy;
+        color: deeppink
     }
     </style>    
     
@@ -39,12 +45,13 @@
         <h3 class="silver-background">Cookies Delight</h3>
         
         <h4 style="color: coral;">Cookies counting</h4>
+        <h5 id="power"></h5>
     </body>
     <script type="text/javascript">
         var count = 0;
         var button = document.getElementById('bake');
         
-        var cookieCountElement = document.getElementById('cookies');
+        var cookieCountElement = document.getElementById('cookies'); 
         
         
         button.addEventListener('click', function() {
@@ -52,14 +59,24 @@
             
             cookieCountElement.innerHTML = count;
             
-            if (count >= 15) {
+            if (count > 1 && count < 15) {
+                var status = document.getElementById('status');
+                status.innerHTML = "You need to keep baking cookies!"
+            }
+            else if (count > 15 && count < 30) {
                 var status = document.getElementById('status');
                 status.innerHTML = "You are awesome!"
+            } else if (count > 30 && count < 40) {
+                var status = document.getElementById('status');
+                status.innerHTML = "Now we're talking!"
+            } else if (count > 40 && count < 60) {
+                var status = document.getElementById('status');
+                status.innerHTML = "COOKIES FOR DAYS!"
             }
         });
       
        //If the count is less than 15, that status element needs to say "You need to keep baking cookies!"//
-        
+    
         
         
         
