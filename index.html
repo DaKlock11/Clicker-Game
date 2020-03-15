@@ -33,6 +33,9 @@
         font-family: fantasy;
         color: deeppink
     }
+    h6 {
+        color: white;
+    }
     </style>    
     
     <body>
@@ -46,10 +49,7 @@
         
         <h4 style="color: coral;">Cookies counting</h4>
         <h5>What is your favorite Cookie?</h5>
-        <h6>Quiz</h6>
-        <div id="question">True or False: The sky is blue?</div>
         <h6 id="power"></h6>
-        <button onclick="choc()">this</button>
         <button id="choco">Chocolate Chip</button>
         <button id="oats">Oatmeal</button>
         <button id="nuts">Macadamia</button>
@@ -67,41 +67,67 @@
             count += 1;
             
             cookieCountElement.innerHTML = count;
-            
+            var status = document.getElementById('status');
             if (count > 1 && count < 15) {
-                var status = document.getElementById('status');
+
                 status.innerHTML = "You need to keep baking cookies!"
             }
             else if (count > 15 && count < 30) {
-                var status = document.getElementById('status');
+
                 status.innerHTML = "You are awesome!"
             } else if (count > 30 && count < 40) {
-                var status = document.getElementById('status');
+
                 status.innerHTML = "Now we're talking!"
             } else if (count > 40 && count < 60) {
-                var status = document.getElementById('status');
+
                 status.innerHTML = "COOKIES FOR DAYS!"
             }
         });
-      
-    function choc() {
-          document.getElementById['question'].innerHTML= "Yummy!";
-      }
+        
+        var chocolateButton = document.getElementById('choco');
+        chocolateButton.addEventListener('click', function() {
+            document.getElementById('power').innerHTML= "Yummy!";
+        });
+        
+        // HOW TO GET A BUTTON WORKING IN HTML + JAVASCRIPT
+        // 1. Create the button element with an id <button id="my-id">Hello</button>
+        // 2. Create a button variable in Javascript. Pass it the id of the button
+            // var myButton = document.getElementById('my-id')
+        // 3. Add a "click" event listener to the button variable
+            /*
+                myButton.addEventListener('click', function() {
+                    // 4. The code inside this function will run every time you click on this button
+                })
+            */
+        // 5. Hit CTRL + S to save your work!
+   
+        // CHALLENGE
+        // Every time you click on a cookie type (chocolate, oatmeal, etc), it changes the type of cookie being baked
+        // Display all the different cookies being baked in the UI (user interface)
+        // "I click on "spice," then "Bake Cookies" - the UI should show 1 spice cookies
+        // The UI should show all the types of cookies and how many of each cookie has been baked
+        
+        // Notes and tips
+        //  * You will need to track each cookie's count in its own individual variable
+        //    * i.e = var chocolateCookieCount = 0; var oatmealCookieCount = 0; 
+        //  * You will need a variable that keeps track of what cookie to currently bake: var bakeThisCookie = 'choco';
+        
+        //  Don't be afraid to google stuff and have fun! This is a big unique challenge, but I know you can do it!
         
     function oat() {
-         document.getElementById['power'].innerHTML= "Senior Citizen cookie!";
+         document.getElementById('power').innerHTML= "Senior Citizen cookie!";
      }  
      
     function nut() {
-        document.getElementById['power'].innerHTML= "Underrated cookie, you have good taste!";
+        document.getElementById('power').innerHTML= "Underrated cookie, you have good taste!";
     }   
         
     function spice() {
-        document.getElementById['power'].innerHTML= "Reminds me of Christmas!";
+        document.getElementById('power').innerHTML= "Reminds me of Christmas!";
     }    
         
     function peanut() {
-        document.getElementById['power'].innerHTML= "My all time favorite!";
+        document.getElementById('power').innerHTML= "My all time favorite!";
     }    
        //If the count is less than 15, that status element needs to say "You need to keep baking cookies!"//
     
