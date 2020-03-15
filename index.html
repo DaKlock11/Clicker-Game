@@ -45,7 +45,16 @@
         <h3 class="silver-background">Cookies Delight</h3>
         
         <h4 style="color: coral;">Cookies counting</h4>
-        <h5 id="power"></h5>
+        <h5>What is your favorite Cookie?</h5>
+        <h6>Quiz</h6>
+        <div id="question">True or False: The sky is blue?</div>
+        <h6 id="power"></h6>
+        <button onclick="choc()">this</button>
+        <button id="choco">Chocolate Chip</button>
+        <button id="oats">Oatmeal</button>
+        <button id="nuts">Macadamia</button>
+        <button id="pea">Peanut Butter</button>
+        <button id="spice">Spice/Gngrbrd</button>
     </body>
     <script type="text/javascript">
         var count = 0;
@@ -75,6 +84,25 @@
             }
         });
       
+    function choc() {
+          document.getElementById['question'].innerHTML= "Yummy!";
+      }
+        
+    function oat() {
+         document.getElementById['power'].innerHTML= "Senior Citizen cookie!";
+     }  
+     
+    function nut() {
+        document.getElementById['power'].innerHTML= "Underrated cookie, you have good taste!";
+    }   
+        
+    function spice() {
+        document.getElementById['power'].innerHTML= "Reminds me of Christmas!";
+    }    
+        
+    function peanut() {
+        document.getElementById['power'].innerHTML= "My all time favorite!";
+    }    
        //If the count is less than 15, that status element needs to say "You need to keep baking cookies!"//
     
         
